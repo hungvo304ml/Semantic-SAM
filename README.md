@@ -56,6 +56,9 @@ Our model supports a wide range of segmentation tasks and their related applicat
 ### :hammer_and_wrench: Installation
 ```shell
 pip3 install torch==1.13.1 torchvision==0.14.1 --extra-index-url https://download.pytorch.org/whl/cu113
+conda install -c conda-forge cxx-compiler==1.5.2 # Run this command only if the cluster lacks an appropriate g++ version.
+conda install conda-forge::ninja
+conda install --channel=conda-forge libxcrypt
 python -m pip install 'git+https://github.com/MaureenZOU/detectron2-xyz.git'
 pip install git+https://github.com/cocodataset/panopticapi.git
 git clone https://github.com/UX-Decoder/Semantic-SAM
