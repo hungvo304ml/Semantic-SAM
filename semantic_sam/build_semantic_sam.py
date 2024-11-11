@@ -68,6 +68,7 @@ def plot_results(outputs, image_ori, save_path='../vis/'):
     plt.imshow(image_ori)
     plt.savefig(os.path.join(save_path, image_ori_name))
     show_anns(outputs)
+    plt.axis('off')
     fig.canvas.draw()
     im = Image.frombytes('RGB', fig.canvas.get_width_height(), fig.canvas.tostring_rgb())
     plt.savefig(os.path.join(save_path, im_name))
